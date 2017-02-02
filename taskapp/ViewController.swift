@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             taskArray = realm
                 .objects(Task.self)
-                .filter("title BEGINSWITH %@", searchText)
+                .filter("category BEGINSWITH %@", searchText)
         }
         
         tableView.reloadData()
